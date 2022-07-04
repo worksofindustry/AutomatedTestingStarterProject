@@ -38,7 +38,7 @@ def test_invalid_slap():
     with pytest.raises(ValueError):
         slap_many(LikeState.empty, 'x')
 
-
+# using a fixture for the database connection, in order to prevent from creating and destroying a bunch of database connections. 
 @pytest.mark.xfail
 def test_db_slap(db_conn):
     db_conn.read_slaps()
