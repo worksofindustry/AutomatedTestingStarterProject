@@ -33,7 +33,7 @@ def test_regex_slaps():
 def test_divide_by_zero():
     assert 1 / 0 == 1
 
-
+# will fail if a particular exception is not raised. 
 def test_invalid_slap():
     with pytest.raises(ValueError):
         slap_many(LikeState.empty, 'x')
